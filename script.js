@@ -35,9 +35,9 @@ temp.style.border = '1px solid #2b2e4a'
 SearchBox.value = ''
     })
     .catch(err => {
-let array = ['This is not valid input','Your place not found in my map LOL!!','Is this place on Mars?','Place not Found','Double check your Input']
+let array = ['This is not valid input','Your place not found in my map LOL!!','Place not Found','Double check your Input']
 const randomElement = array[Math.floor(Math.random() * array.length)]
-message.innerHTML = randomElement +'<br>please check your input'
+message.innerHTML = randomElement +'<br>City not found'
 setTimeout(() => {
     message.innerHTML = ''
 },1500);
