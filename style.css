@@ -207,5 +207,33 @@ a{
     color: #2b2e4a;
 }
 }
+@media (max-height: 495px){
+    .follow{
+        display: none;
+    }
+    .developer{
+        display: none;
+    }
+    .para{
+        display: none;
+    }
+    a{
+        display: none;
+    }
+    .header{
+        font-size: 10px;
+        top: 25px;
+    }
+    input[type="text"]{
+        height: 45px;
+        width: 212px;
+        font-size: 12px;
+}
+input[type="submit"]{
+    height: 45px;
+    width: 80px;
+    font-size: 13px;
 
+}
+}
 
