@@ -7,8 +7,9 @@ const firstHead = document.querySelector('.places')
 const secondHead = document.querySelector('.condition')
 const thirdHead = document.querySelector('.temperature')
 const tables = document.querySelector('table')
+const message = document.querySelector('.errors')
 
-SearchButton.addEventListener('click', ()=>{
+function click(){
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+SearchBox.value+'&appid=d8527f4d5989591cb73c6e4b594b0f01')
     .then(response => response.json())
     .then(data => {
@@ -24,14 +25,24 @@ thirdHead.innerHTML = 'TEMPERATURE(°C)'
 city.innerHTML = nameOfCity
 desc.innerHTML = DescriptionValue
 temp.innerHTML = currentTemp + '°C'
-tables.style.border = '1px solid #2e2e2e'
-firstHead.style.border = '1px solid #2e2e2e'
-secondHead.style.border = '1px solid #2e2e2e'
-thirdHead.style.border = '1px solid #2e2e2e'
-city.style.border = '1px solid #2e2e2e'
-desc.style.border = '1px solid #2e2e2e'
-temp.style.border = '1px solid #2e2e2e'
+tables.style.border = '1px solid #eeeeee'
+firstHead.style.border = '1px solid #eeeeee'
+secondHead.style.border = '1px solid #eeeeee'
+thirdHead.style.border = '1px solid #eeeeee'
+city.style.border = '1px solid #eeeeee'
+desc.style.border = '1px solid #eeeeee'
+temp.style.border = '1px solid #eeeeee'
 SearchBox.value = ''
     })
-    .catch(err => alert('city not found'))
-})
+    .catch(err => {
+let array = ['This is not valid input','Your place not found in my map LOL!!','Is this place on Mars?','Place not Found','Double check your Input']
+const randomElement = array[Math.floor(Math.random() * array.length)]
+message.innerHTML = randomElement +'<br>please check your input'
+setTimeout(() => {
+    message.innerHTML = ''
+},1500);
+    })
+}
+
+SearchButton.addEventListener('click', click)
+SearchButton.addEventListener('touchend', click)

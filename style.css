@@ -4,17 +4,15 @@
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
 }
-.container{
-    height: 100vh;
-    background-image: linear-gradient( 109.6deg,  rgba(5,84,94,1) 16%, #bbb 91.1% );
-    overflow: hidden;
+body{
+    background: #cadefc;
 }
 .header{
     position: absolute;
     left: 50%;
     top: 50px;
     transform: translate(-50%,-50%);
-    color: #2e2e2e;
+    color: #2b2e4a;
 }
 .search{
     position: absolute;
@@ -31,7 +29,7 @@ input[type="text"]{
     border: none;
     outline: none;
     font-size: 20px;
-    color: #2e2e2e;
+    color: #2b2e4a;
     background: #eeeeee;
 }
 input[type="submit"]{
@@ -40,8 +38,8 @@ input[type="submit"]{
     border: none;
     outline: none;
     font-size: 20px;
-    color: #2e2e2e;
-    background: #eeeeee;
+    color: #eeeeee;
+    background: #2b2e4a;
 }
 input::placeholder{
     opacity: 5;
@@ -60,11 +58,11 @@ input[type="submit"]:hover{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    background: #eeeeee;
+    background: #2b2e4a;
 }
 table ,th, td{
     border-collapse: collapse;
-    color: #2e2e2e;
+    color: #eeeeee;
     padding: 10px;
 }
 table{
@@ -73,6 +71,112 @@ table{
     top: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
+}
+.errors{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    color: #e23e57;
+    margin-top: 20px;
+}
+.developer{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #2e2e2e;
+}
+a{
+    text-decoration: none;
+    color: #2e2e2e;
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+.follow{
+    position: absolute;
+    color: #2e2e2e;
+    left: 50%;
+    bottom: 83px;
+    transform: translate(-50%,-50%);
+}
+.para{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translate(-50%,-50%);
+    color: #2b2e4a;
+}
+@media(max-width: 500px) and (orientation: portrait){ 
+   body{
+    background: #cadefc;
+   } 
+   .header{
+    transform: translate(-50%,-50%);
+    color: #2e2e2e;
+    font-size: x-large;
+    text-align: center;
+}
+input[type="text"]{
+    height: 45px;
+    width: 200px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #2e2e2e;
+    background: #eeeeee;
+}
+input[type="submit"]{
+    height: 45px;
+    width: 80px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color:  #eeeeee;
+    background: #2b2e4a;
+}
+.elements{
+    width: 400px;
+    height: 279px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: #2b2e4a;
+}
+input[type="submit"]:hover{
+    background: #2b2e4a;
+    color: #eeeeee;
+}
+table ,th, td{
+    border-collapse: collapse;
+    color: #eeeeee;
+    padding: 10px;
+}
+table{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+}
+.errors{
+    text-align: center;
+    font-size: medium;
+    color: #e23e57;
+    margin-top: 20px;
+}
+.developer{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    font-size: small;
+    transform: translate(-50%,-50%);
+    color: #2e2e2e;
+}
 }
 
 
