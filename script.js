@@ -40,7 +40,7 @@ const randomElement = array[Math.floor(Math.random() * array.length)]
 message.innerHTML = randomElement +'<br>City not found'
 setTimeout(() => {
     message.innerHTML = ''
-},1500);
+},2000);
     })
 }
 
